@@ -1,0 +1,59 @@
+1. Demonstrate the usage of $match, $group, aggregate pipelines.
+
+> db.moviesList.aggregate([{ $match : { GENRE : "sports"}}]).pretty()
+{
+        "_id" : ObjectId("60ee6de6b838c6588b61a082"),
+        "MOVIE NAME" : "toofan",
+        "IMDB RATING" : 8.4,
+        "GENRE" : "sports",
+        "FEEDBACKS" : 34789,
+        "REFERRABLE" : true
+}
+
+> db.moviesList.aggregate([{ $group : {_id : "$GENRE", AvgRating : {$avg : "$IMDB RATING"}}}]).pretty()
+{ "_id" : "sports", "AvgRating" : 8.4 }
+{ "_id" : "suspense", "AvgRating" : 8.98 }
+{ "_id" : "drama", "AvgRating" : 7.5200000000000005 }
+{ "_id" : "romantic", "AvgRating" : 7.5 }
+{ "_id" : "comedy", "AvgRating" : 5.6 }
+{ "_id" : "thriller", "AvgRating" : 8.18 }
+
+> db.moviesList.aggregate([ { $match: { GENRE: "thriller"}}, { $group: { _id: "$REFERRABLE", AvgFeedbacks: { $avg : "$FEEDBACKS"}}} ])
+{ "_id" : true, "AvgFeedbacks" : 41856.666666666664 }
+{ "_id" : false, "AvgFeedbacks" : 10467 }
+
+
+
+2. Demonstrate the Map-Reduce aggregate function on this dataset.
+
+> var mapper = function() {emit(this.GENRE, this["FEEDBACKS"])}
+> var reduce = function(GENRE, FEEDBACKS) {return Array.sum(FEEDBACKS)}
+> db.moviesList.mapReduce(mapper, reduce, {out : "FEEDBACKSout"})
+{ "result" : "FEEDBACKSout", "ok" : 1 }
+
+> db.FEEDBACKSout.find().pretty()
+{ "_id" : "comedy", "value" : 67892 }
+{ "_id" : "thriller", "value" : 146504 }
+{ "_id" : "sports", "value" : 34789 }
+{ "_id" : "suspense", "value" : 195123 }
+{ "_id" : "drama", "value" : 197063 }
+{ "_id" : "romantic", "value" : 114463 }
+
+
+
+3. Count the number of Movies which belong to the thriller category and find out the total number of positive reviews in that category.
+
+> db.moviesList.aggregate([{ $group : {_id : { GENRE : "thriller"}, "TotalPositiveFeedbacks" : {$sum : "$FEEDBACKS"}}}])
+{ "_id" : { "GENRE" : "thriller" }, "TotalPositiveFeedbacks" : 755834 }
+
+
+
+4. Group all the records by genre and find out the total number of positive feedbacks by genre.
+
+> db.moviesList.aggregate([{ $group : {_id : "$GENRE", "TotalPositiveFeedbacks" : {$sum : "$FEEDBACKS"}}}]).pretty()
+{ "_id" : "sports", "TotalPositiveFeedbacks" : 34789 }
+{ "_id" : "suspense", "TotalPositiveFeedbacks" : 195123 }
+{ "_id" : "drama", "TotalPositiveFeedbacks" : 197063 }
+{ "_id" : "romantic", "TotalPositiveFeedbacks" : 114463 }
+{ "_id" : "comedy", "TotalPositiveFeedbacks" : 67892 }
+{ "_id" : "thriller", "TotalPositiveFeedbacks" : 146504 }

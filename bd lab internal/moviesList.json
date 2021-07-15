@@ -1,0 +1,142 @@
+[
+	{
+		"MOVIE NAME": "sanju",
+		"IMDB RATING": 9.2,
+		"GENRE": "drama",
+		"FEEDBACKS": 23456,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "deewar",
+		"IMDB RATING": 7.2,
+		"GENRE": "drama",
+		"FEEDBACKS": 35698,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "aarya",
+		"IMDB RATING": 8.2,
+		"GENRE": "suspense",
+		"FEEDBACKS": 11594,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "dilwale",
+		"IMDB RATING": 6.2,
+		"GENRE": "romantic",
+		"FEEDBACKS": 34212,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "raazi",
+		"IMDB RATING": 7.9,
+		"GENRE": "thriller",
+		"FEEDBACKS": 16367,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "uri",
+		"IMDB RATING": 9.5,
+		"GENRE": "suspense",
+		"FEEDBACKS": 35097,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "ghazi attack",
+		"IMDB RATING": 6.4,
+		"GENRE": "thriller",
+		"FEEDBACKS": 78545,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "raees",
+		"IMDB RATING": 6.8,
+		"GENRE": "drama",
+		"FEEDBACKS": 36791,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "pathan",
+		"IMDB RATING": 8.8,
+		"GENRE": "drama",
+		"FEEDBACKS": 46742,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "toofan",
+		"IMDB RATING": 8.4,
+		"GENRE": "sports",
+		"FEEDBACKS": 34789,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "mirzapur",
+		"IMDB RATING": 9.0,
+		"GENRE": "thriller",
+		"FEEDBACKS": 12456,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "dhishoom",
+		"IMDB RATING": 5.6,
+		"GENRE": "comedy",
+		"FEEDBACKS": 67892,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "haseen dilruba",
+		"IMDB RATING": 8.8,
+		"GENRE": "suspense",
+		"FEEDBACKS": 23907,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "bodyguard",
+		"IMDB RATING": 5.6,
+		"GENRE": "drama",
+		"FEEDBACKS": 54376,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "tiger zinda hai",
+		"IMDB RATING": 9.2,
+		"GENRE": "suspense",
+		"FEEDBACKS": 89765,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "family man",
+		"IMDB RATING": 9.4,
+		"GENRE": "thriller",
+		"FEEDBACKS": 34569,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "special ops",
+		"IMDB RATING": 9.2,
+		"GENRE": "suspense",
+		"FEEDBACKS": 34760,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "raat akeli hai",
+		"IMDB RATING": 7.8,
+		"GENRE": "romantic",
+		"FEEDBACKS": 34567,
+		"REFERRABLE": true
+	},
+	{
+		"MOVIE NAME": "sacred games",
+		"IMDB RATING": 8.2,
+		"GENRE": "thriller",
+		"FEEDBACKS": 4567,
+		"REFERRABLE": false
+	},
+	{
+		"MOVIE NAME": "out of love",
+		"IMDB RATING": 8.5,
+		"GENRE": "romantic",
+		"FEEDBACKS": 45684,
+		"REFERRABLE": false
+	}
+]
